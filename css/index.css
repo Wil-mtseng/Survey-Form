@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	/*background-color:  #1f1f1f;*/
+	display: flex;
+}
+
+/*Container*/
+#container {
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: #f1f1f1;
+	box-shadow: 3px 3px 3px 3px #ccc;
+}
+
+/*Header*/
+#title {
+	font-size: 50px;
+	align-self: center;
+	text-align: center;
+	justify-content: center;
+	color: #00ffff;
+
+}
+
+#description {
+	align-self: center;
+	text-align: center;
+	justify-content: center;
+	font-weight: bold;
+	color: #00ffff;
+
+}
+
+/*Form section*/
+#survey-form {
+	/*width: 50%;*/
+	height: auto;
+	margin: 50px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+
+}
+
+/*Radio buttons*/
+#radio-button {
+	margin: 20%;
+	padding: 20px;
+}
+
+.radio-button {
+	line-height: 20px;
+}
+
+/*Check box*/
+.label-checkbox {
+	float: center;
+}
+
+/*Email section*/
+
+/*Textarea*/
+#msg {
+	border-radius: 10px;
+	color: #00ffff;
+
+
+}
+
+/*Button*/
+#submit {
+	border-radius: 10px;
+	color: #00ffff;
+
+}
+/*Media queries*/

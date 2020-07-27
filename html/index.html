@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<title>Survey Form</title>
+</head>
+<body>
+	<div id="container">
+		<h1 id="title">Survey Form</h1>
+		<p id="description">Survey form for testing</p>
+
+		<form id="survey-form">
+	
+			<label id="name-label" for="name">Name:</label><br>
+			<input  id="name" type="text" name="name" placeholder="Enter name" required><br>
+	
+			<label id="email-label" for="email">Email:</label>
+			<input id="email" type="email" name="email" placeholder="Enter email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required><br>
+	
+			<label id="number-label" for="number">Number</label>
+			<input id="number" type="number" name="number" placeholder="Enter contact number" required min="10" max="13" required><br>
+	
+			<label id="label-options">Please select one of the following</label>
+			<select id="dropdown" name="Add name for options">
+				<option id="option1">Wilfred</option>
+				<option id="option2">Wil</option>
+				<option id="option3">Fred</option>
+			</select><br>
+
+			<fieldset name="radio-button">
+				<legend>Select one radio button</legend>
+			
+				<input type="radio" name="radio-button" value="Scrofa holdings">
+				<label class="label-radio">Scrofa Holding</label><br>
+			
+				<input type="radio" name="radio-button" value="Boar Inc">
+				<label class="label-radio">Boar Inc</label><br>
+			
+				<input type="radio" name="radio-button" value="Ratala PTY LTD">
+				<label class="label-radio">Ratala PTY LTD</label><br>		
+			</fieldset>
+
+				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
+				<label class="label-checkbox">Scrofa Holding</label><br>
+			
+				<input type="checkbox" name="checkbox-button" value="Boar Inc">
+				<label class="label-checkbox">Boar Inc</label><br>
+		
+				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
+				<label class="label-checkbox">Ratala PTY LTD</label><br>
+
+				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
+				<label class="label-checkbox">Scrofa Holding</label><br>
+		
+				<input type="checkbox" name="checkbox-button" value="Boar Inc">
+				<label class="label-checkbox">Boar Inc</label><br>
+		
+				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
+				<label class="label-checkbox">Ratala PTY LTD</label><br>
+
+				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
+				<label class="label-checkbox">Scrofa Holding</label><br>
+		
+				<input type="checkbox" name="checkbox-button" value="Boar Inc">
+				<label class="label-checkbox">Boar Inc</label><br>
+		
+				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
+				<label class="label-checkbox">Ratala PTY LTD</label><br> 
+
+	
+			<textarea id="msg" name="message" rows="10" cols="30">Write something...</textarea><br>
+			<input id="submit" type="submit" name="submit">
+		</form>
+	
+	</div>
+</body>
+</html>
