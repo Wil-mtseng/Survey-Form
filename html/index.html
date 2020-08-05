@@ -1,79 +1,331 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
-	<title>Survey Form</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>Website Development/Design Questionnaire</title>
 </head>
 <body>
-	<div id="container">
-		<h1 id="title">Survey Form</h1>
-		<p id="description">Survey form for testing</p>
+	<div id="container" action="/action_page.php">
+		<header id="header">
+			<h1 id="title">Website Development/Design Questionnaire</h1>
+			<p id="description">Please complete the form so we can understand your unique business needs</p>
+		</header>
 
 		<form id="survey-form">
-	
-			<label id="name-label" for="name">Name:</label><br>
-			<input  id="name" type="text" name="name" placeholder="Enter name" required><br>
-	
-			<label id="email-label" for="email">Email:</label>
-			<input id="email" type="email" name="email" placeholder="Enter email address" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required><br>
-	
-			<label id="number-label" for="number">Number</label>
-			<input id="number" type="number" name="number" placeholder="Enter contact number" required min="10" max="13" required><br>
-	
-			<label id="label-options">Please select one of the following</label>
-			<select id="dropdown" name="Add name for options">
-				<option id="option1">Wilfred</option>
-				<option id="option2">Wil</option>
-				<option id="option3">Fred</option>
-			</select><br>
+			
+			<fieldset id="contact-field">
+				<legend id="contact-header"><span>Contact Info</span></legend>
 
-			<fieldset name="radio-button">
-				<legend>Select one radio button</legend>
-			
-				<input type="radio" name="radio-button" value="Scrofa holdings">
-				<label class="label-radio">Scrofa Holding</label><br>
-			
-				<input type="radio" name="radio-button" value="Boar Inc">
-				<label class="label-radio">Boar Inc</label><br>
-			
-				<input type="radio" name="radio-button" value="Ratala PTY LTD">
-				<label class="label-radio">Ratala PTY LTD</label><br>		
+				<label id="email-label" for="email">Email Address</label>
+				<input id="email" type="email" name="email" placeholder="Enter business email address" required><br>	
+
+				<label id="name-label" for="name">Name</label>
+				<input  id="name" type="text" name="name" placeholder="Enter your name" required><br>
+
+				<label id="name-label" for="name">Organisation name</label>
+				<input  id="name" type="text" name="name" placeholder="Enter organisation name" required><br>
+
+				<label id="number-label" for="number">Contact number</label>
+				<input id="number" type="number" name="number" placeholder="Enter contact number"  min="10" max="15" required ><br>
+
+				<label id="name-label" for="name">Deadline for this project</label>
+				<input  id="name" type="date" name="date" placeholder="Enter deadline date" required><br>
+
+				<label id="name-label" for="name">What is the budget for the website?</label>
+				<input  id="name" type="number" name="number" placeholder="Enter budget amount" min="10" max="15" required><br>
+					
+			</fieldset>	<br>
+
+
+			<fieldset id="organisation-field">
+				<legend id="organisation-header"><span>Organisation Info</span></legend>
+
+				<label id="name-label" for="name">Briefly describe your company</label>
+				<input  id="name" type="text" name="name" placeholder="Enter description" required><br>
+
+				<label id="name-label" for="name">What services do you provide</label>
+				<input  id="name" type="text" name="name" placeholder="What services do you provide" required><br>
+
+				<label id="name-label" for="name">What sets your company apart from your competition?</label>
+				<input  id="name" type="text" name="name" placeholder="Unique selling point" required><br>
+
+				<label id="name-label" for="name">Who is your target audience/market</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>	
+
+				<label id="name-label" for="name">What will they use your site for</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>
+
+				<label id="name-label" for="name">How do you currently attract new customers</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>
+
+				<label id="name-label" for="name">What are your company colors, branding guidelines, fonts</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>			
+
+				<label id="name-label" for="name">If you were looking for your business in a search engine (e.g. Google or Yahoo) what words or phrases would
+				you type</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>
+
+				<label id="name-label" for="name">How do you crurrently attract new customers</label>
+				<input  id="name" type="text" name="name" placeholder="Enter target market" required><br>
+
+				<label id="label-options">Does your business/organisation have a website?</label>
+				<select id="dropdown" name="business website">
+					<option id="option1">Yes</option>
+					<option id="option2">No</option>
+					<option id="option3">Currently unavailable</option>
+				</select><br>
+
+			<p>If yes, kindly provide the website URL below</p>
+			<input type="text" name="client website URL" placeholder="website url..."><br>
+
+			<label id="name-label" for="name">Why do you need a new website?</label>
+			<input  id="name" type="text" name="name" placeholder="Reasons for new website/re-design" required><br>
+
 			</fieldset>
 
-				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
-				<label class="label-checkbox">Scrofa Holding</label><br>
+			<fieldset name="radio-button" id="requirements-field">
+
+				<legend id="requirements-header"><span>Website requirements</span></legend><br>
+				
+				<label>Will you require seach engine optimisation?</label><br>
 			
-				<input type="checkbox" name="checkbox-button" value="Boar Inc">
-				<label class="label-checkbox">Boar Inc</label><br>
-		
-				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
-				<label class="label-checkbox">Ratala PTY LTD</label><br>
+				<label class="label-radio">
+				<input type="radio" name="SEO" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="SEO" value="No">
+				<span>No</span>
+				</label>
 
-				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
-				<label class="label-checkbox">Scrofa Holding</label><br>
-		
-				<input type="checkbox" name="checkbox-button" value="Boar Inc">
-				<label class="label-checkbox">Boar Inc</label><br>
-		
-				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
-				<label class="label-checkbox">Ratala PTY LTD</label><br>
+				<label id="label-options">Do you need a new URL?</label><br>
 
-				<input type="checkbox" name="checkbox-button" value="Scrofa holdings">
-				<label class="label-checkbox">Scrofa Holding</label><br>
-		
-				<input type="checkbox" name="checkbox-button" value="Boar Inc">
-				<label class="label-checkbox">Boar Inc</label><br>
-		
-				<input type="checkbox" name="checkbox-button" value="Ratala PTY LTD">
-				<label class="label-checkbox">Ratala PTY LTD</label><br> 
+				<label class="label-radio">
+				<input type="radio" name="URL" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="URL" value="No">
+				<span>No</span>
+				</label>
 
+				<label id="label-options">Do you need hosting?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="hosting" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="hosting" value="No">
+				<span>No</span>
+				</label>
+
+				<label id="label-options">Do you currently have a registered domain? (If yes please provide the name of the service provider )</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="domain" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="domain" value="No">
+				<span>No</span>
+				</label>
+
+				<label id="label-options">Do you want us to handle maintenance?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="maintenance" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="maintenance" value="Yes">
+				<span>No</span>
+				</label>
+
+				<label id="label-options">Will you be providing any images for the website</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="images" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="images" value="No">
+				<span>No</span>
+				</label>
+
+				<label id="label-options">Do you have all the required content(text, info, articles links)</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="required-content" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="required-content" value="No">
+				<span>No</span>
+				</label>
+
+				<label id="label-options">Is there any theme /feel you want to incorparate into your website?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="theme" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="theme" value="No">
+				<span>No</span>
+				</label>
+
+				<label id="name-label" for="name">When people visit your site, what are some of the feelings you want to share with them</label>
+				<input  id="name" type="text" name="name" placeholder="Enter description" required><br>
+			</fieldset>
+
+			<fieldset id="pages-field">
+				<legend id="pages-header"><span>Website page content</span></legend><br>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="About">
+					<span>About</span>
+				</label>
+
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Contact">
+					<span>Contact</span>
+				</label>
+				
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Contact">
+					<span>Contact</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Info">
+					<span>Info</span>
+				</label>
+		
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="FAQ">
+					<span>FAQ</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Services">
+					<span>Services</span>
+				</label>
+		
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Client List">
+					<span>Client List</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Client List">
+					<span>Client List</span>
+				</label>
+
+				<label id="label-options">Do you have any form you need available for clients for download on your site?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="download-form" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="download-form" value="Yes">
+				<span>No</span>
+				</label>		
+
+				<label id="label-options">Will your site have a blog?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="blog" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="blog" value="Yes">
+				<span>No</span>
+				</label>		
+
+				<label id="label-options">Will your site have a store/shop?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="store/shop" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="store/shop" value="Yes">
+				<span>No</span>
+				</label>		
+
+				<label id="label-options">Is there anything you absolutley don’t want in your site</label><br>
+
+				<input type="text" name="message" placeholder="Your answer"><br>
+			
+				<label id="label-options">Do you wish to incorporate your social media accounts into your web site?</label><br>
+
+				<label class="label-radio">
+				<input type="radio" name="social-media-accounts" value="Yes">
+				<span>Yes</span>
+				</label>
+			
+				<label class="label-radio">
+				<input type="radio" name="social-media-accounts" value="Yes">
+				<span>No</span>
+				</label>		
+			</fieldset>
+
+			<fieldset id="feature-field">
+
+				<legend id="feature-header"><span>Special Features</span></legend>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Image Gallery">
+					<span>Image Gallery</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Portfolio">
+					<span>Portfolio</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Map (in Locations, contact or other pages)">
+					<span>Map (in Locations, contact or other pages)</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Search box">
+					<span>Search box</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Newsletter signup form">
+					<span>Newsletter signup form</span>
+				</label>
+
+				<label class="label-checkbox">
+					<input type="checkbox" name="checkbox-button" value="Upcoming Events">
+					<span>Upcoming Events</span>
+				</label>
+			</fieldset>
 	
-			<textarea id="msg" name="message" rows="10" cols="30">Write something...</textarea><br>
+			<textarea id="msg" name="message" rows="10" cols="30" placeholder="Anything else you want to add?"></textarea><br>
 			<input id="submit" type="submit" name="submit">
 		</form>
-	
 	</div>
 </body>
 </html>
