@@ -95,6 +95,7 @@ body {
 	
 	width: 100%;
 	height: auto;
+	
 	padding: 10px;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -169,13 +170,12 @@ legend {
 	border: #f1f1f1;
 	border-radius: 5px;
 
-	/*background-color: #fff;*/
 }
 
 
 /*Textarea*/
 textarea {
-	width: 100%;
+	width: 100vw;
 	height: 150px;
 	
 	padding: 12px 20px;
@@ -201,11 +201,45 @@ input[type=submit] {
 	box-sizing: border-box;
 	
 	cursor: pointer;
+
+
 }
 
 /*Media queries*/
 @media screen and (max-width: 480px) {
   body {
-    background-color: lightgreen;
+  	width: 100vw;
+  	
+  	margin: 0;
+	padding: 0;
+    
+  }
+
+  #survey-form,
+  #container {
+  	width: 80vw;
+  	height: auto;
+
+  	margin-left: 3vw;
+  	margin-right: 1vw;
+  	padding: 0;
+
+  	justify-content: center;
+  	align-contents: center;
+  }
+
+  #header {
+  	width: 80vw;
+  	height: auto;
+
+  	margin-left: 4vw;
+  }
+
+  #title {
+  	font-size: 25px;
+  }
+
+  textarea {
+  	width: 80vw;
   }
 }
